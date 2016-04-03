@@ -4,6 +4,9 @@ import android.support.annotation.NonNull;
 
 import okhttp3.RequestBody;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public abstract class BaseRequest {
     public enum Method {
         GET("GET"),
@@ -24,6 +27,7 @@ public abstract class BaseRequest {
     private Method method;
     private RequestBody requestBody;
     private Class<?> responseType;
+    private Map<String, String> headers = new HashMap<>();
 
     public BaseRequest(@NonNull String url, @NonNull Method method, @NonNull Class<?> responseType) {
         this.url = url;
@@ -66,6 +70,21 @@ public abstract class BaseRequest {
 
     public BaseRequest setResponseType(Class<?> responseType) {
         this.responseType = responseType;
+        return this;
+    }
+
+    @NonNull
+    public Map<String, String> getHeaders() {
+        return headers;
+    }
+
+    public BaseRequest setHeaders(@NonNull Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+
+    public BaseRequest addHeader(String key, String value) {
+        this.headers.put(key, value);
         return this;
     }
 }
