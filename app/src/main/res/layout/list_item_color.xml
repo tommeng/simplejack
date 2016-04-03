@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/vContainer"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="12dp"
+              tools:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvColorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="White"/>
+
+    <TextView
+        android:id="@+id/tvColorDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="The color of clouds and snow."/>
+
+</LinearLayout>
