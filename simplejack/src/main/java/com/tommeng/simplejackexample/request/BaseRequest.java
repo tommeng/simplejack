@@ -6,7 +6,8 @@ import okhttp3.RequestBody;
 
 public abstract class BaseRequest {
     public enum Method {
-        GET("GET");
+        GET("GET"),
+        POST("POST");
 
         private String value;
 
