@@ -8,6 +8,12 @@ GET, POST, JSON responses
 
 Uses [OKHTTP http client](https://github.com/square/okhttp) and [GSON json parser](https://github.com/google/gson).
 </br>
+## Example
+```java
+BaseRequest request = new GetRequest(myUrl, SomeResult.class);
+SomeResult someResult = NetworkManager.get().executeForList(request);
+```
+</br>
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
